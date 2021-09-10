@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "NTR";
+    font-weight: 200;
+    font-display: fallback;
+    src: url("/fonts/NTR-Regular.ttf") format("truetype");
+}
+
+#about {
+    padding-left: 15%;
+    padding-top: 5%;
+    padding-right: 25%;
+}
+
+.about-description ul {
+    padding-top: 20px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 10px));
+}
+
+.about-description li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 20px;
+    color: var(--slate);
+}
+
+.about-description li::before {
+    content: "▹    ";
+    color: var(--green-bright);
+    position: absolute;
+    left: 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-description {
+    font-family: "NTR", sans-serif;
+    color: var(--slate);
+    max-width: 600px;
+    font-size: 24px;
+    margin: 0;
+}
+
+.about-description a,
+.about-description b {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    #about {
+        height: unset;
+        padding-left: unset;
+        padding-right: unset;
+        padding-top: 30%;
+    }
+
+    .about-description {
+        font-size: 20px;
+    }
+    
+    .about-description b {
+        font-size: 20px;
+    }
+
+    .about-content {
+        display: unset;
+    }
+}
